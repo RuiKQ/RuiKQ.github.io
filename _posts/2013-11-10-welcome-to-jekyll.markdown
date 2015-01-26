@@ -1,24 +1,14 @@
 ---
 layout: post
-title:  "在github安家"
+title:  "征途的开始"
 date:   2014-12-22 20:18:00
-categories: Thriller Comedy Horror
+categories: 开始 征途 战斗
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+弄了好久的jekyll今天终于是博客开张了，但是对于jekyll还不是很熟，最终在github上找到了这个开源的主题，还是比较令我满意的，所以在这边多谢 [Kasper theme]，喜欢的朋友可以自己配置。
 
-Jekyll also offers powerful support for code snippets:
+这个博客主要记录自己程序员的成长之路，主要包括ios、Android、OpenGL ES等一系列移动开发知识，记录自己的经验，成长自己。
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+今天是一个新的开始...
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+[Kasper theme]: https://github.com/rosario/kasper

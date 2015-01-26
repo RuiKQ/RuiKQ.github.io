@@ -1,6 +1,8 @@
 ---
 layout: page
-title: About me 
+title: 关于我 
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+* ios开发者
+* 移动游戏引擎爱好者
+* 皇马死忠
