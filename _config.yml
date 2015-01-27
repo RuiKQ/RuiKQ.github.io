@@ -5,7 +5,7 @@ meta_description: "RuiKQ的博客, 左手画笔，右手键盘"
 markdown: redcarpet
 highlighter: pygments
 logo: false
-paginate: 15
+paginate: 10
 baseurl: /
 domain_name: 'http://yourblog-domain.com'
 
