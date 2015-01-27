@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: RuiKQ的博客
+description: 左手画笔，右手键盘
+meta_description: "RuiKQ的博客, 左手画笔，右手键盘"
 
 markdown: redcarpet
 highlighter: pygments
@@ -10,5 +10,5 @@ baseurl: /
 domain_name: 'http://yourblog-domain.com'
 
 # Details for the RSS feed generator
-url:            'blog url'
+url:            'http://ruikq.github.io'
 author:         'RuiKQ'
