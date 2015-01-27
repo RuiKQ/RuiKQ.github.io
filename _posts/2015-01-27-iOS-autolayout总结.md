@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "iOS autoLayout总结"
-date:   2014-12-22 20:18:00
+date:   2015-01-27 20:18:00
 categories: iOS autoLayout UIScrollView
 ---
 
 以前学习iOS的时候没怎么接触autoLayout，自从iPhone6个6+出来之后一直在为以前的app做适配，所以接触到了很多关于autoLayout，一开始很不习惯，但是越用越觉得好用，接触到现在遇到很多问题，在这里总结一下，包括三部分：限制的优先级、autoLayout下得UIScrollView和UITableView。
+
 ##优先级
 在一开始autolayout的使用过程中，优先级常常是被我所忽略掉的，所以有的时候在一些稍微复杂的布局中往往会出现一些很奇怪的问题和警告，尤其是布局一些大小随内容改变的控件时（UIButton、UILabel、UIImageView），而这些问题和警告都可以通过优先级来解决，下面以UILabel为例子来总结一下：
 
