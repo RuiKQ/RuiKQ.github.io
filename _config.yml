@@ -13,7 +13,7 @@ domain_name: 'http://yourblog-domain.com'
 url:            'http://ruikq.github.io'
 author:         'RuiKQ'
 
-comment:
-	provider:duoshuo
+comments:
+	provider: duoshuo
 	duoshuo:
-		short_name:ruikq
+		short_name:	ruikq

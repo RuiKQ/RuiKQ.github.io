@@ -51,5 +51,24 @@ anchorViewForWidth是一个宽和父视图相等，高为0的视图，contentVie
 1、有些情况下UIScrollView不能滚动
 原因是使用`autoLayout`之后，在ViewDidLoad之后，系统会重新计算控件的一些值会导致UIScrollView的ContentSize变为（0，0），所以需要在`viewDidLayoutSubViews`方法中重新设置UIScrollView的contentSize，但有时在ios7上不行，ios7需要在`viewDidAppear：animated`方法设置contentSize。
 
+##UITableView
 
+在UITableView的cell中使用autoLayout，可以根据内容本身来计算cell的高度，在iOS8中只要将tableView.rowHeight设置为`UITableViewAutomaticDimension`，系统就会根据cell设定好的约束自动计算出高度，在iOS7中需要使用`systemLayoutSizeFittingSize:`方法来根据约束计算cell的Size，而在iOS6中我们需要手动计算cell的高度。
+
+UITableView使用`autoLayout`比UIScrollView要简单，唯一让我遇到麻烦的是`tableHeaderView`，在xib文件中加入`tableHeaderView`之后是无法改变他的位置的，也不可使用`autoLayout`增加约束，这就无法动态的改变`tableHeaderView`的高度；在搜寻了StackOverflow之后发现不需要对tableHeaderView设置autoLayout，想要改变tableHeaderView的高度直接更改frame就可以了。
+
+{% highlight ruby %}
+CGRect headerFrame = self.listView.tableHeaderView.frame;
+headerFrame.size.height = 47;
+self.listView.tableHeaderView.frame = headerFrame;
+[self.listView setTableHeaderView:headerView];
+self.listView.contentOffset = CGPointZero;
+{% endhighlight %}
+
+对于将外部自定义的view作为`tableHeaderView`，不能将frame大小设置在自定义的view中，必须也要和上面一样重新设置frame，否则会出现`tableHeaderView`遮挡cell、tableHeaderView拉伸和显示不全等奇怪现象。
+
+##总结
+autoLayout是ios6就提出来的东西，一开始因为体验差、操作烦用的人很少，但是以后的开发中它是必不可少的，由此我想到了Swift，虽然现在刚刚出现版本还不成熟，但是以后必定是慢慢替代Object_C的，因为苹果不会出一个鸡肋东西。接触autoLayout以来已经有好几个月了，也是适配很多UI，autoLayout是一个越用越顺手的东西，如果出现奇怪的问题就说明某个点还没有掌握，需要再去细细学习。最后附上[demo代码]。
+
+[demo代码]:https://github.com/RuiKQ/iosAutoLayout
 
