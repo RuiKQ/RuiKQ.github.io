@@ -12,8 +12,7 @@ domain_name: 'http://yourblog-domain.com'
 # Details for the RSS feed generator
 url:            'http://ruikq.github.io'
 author:         'RuiKQ'
-
-comments:
-	provider: duoshuo
-	duoshuo:
-		short_name:	ruikq
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : ruikq
