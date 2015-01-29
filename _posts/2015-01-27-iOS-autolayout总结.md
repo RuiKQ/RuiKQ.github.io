@@ -57,13 +57,13 @@ anchorViewForWidth是一个宽和父视图相等，高为0的视图，contentVie
 
 UITableView使用`autoLayout`比UIScrollView要简单，唯一让我遇到麻烦的是`tableHeaderView`，在xib文件中加入`tableHeaderView`之后是无法改变他的位置的，也不可使用`autoLayout`增加约束，这就无法动态的改变`tableHeaderView`的高度；在搜寻了StackOverflow之后发现不需要对tableHeaderView设置autoLayout，想要改变tableHeaderView的高度直接更改frame就可以了。
 
-{% hightlight ruby%}
+{% highlight ruby %}
 CGRect headerFrame = self.listView.tableHeaderView.frame;
 headerFrame.size.height = 47;
 self.listView.tableHeaderView.frame = headerFrame;
 [self.listView setTableHeaderView:headerView];
 self.listView.contentOffset = CGPointZero;
-{% endhightlight%}
+{% endhighlight %}
 
 对于将外部自定义的view作为`tableHeaderView`，不能将frame大小设置在自定义的view中，必须也要和上面一样重新设置frame，否则会出现`tableHeaderView`遮挡cell、tableHeaderView拉伸和显示不全等奇怪现象。
 
