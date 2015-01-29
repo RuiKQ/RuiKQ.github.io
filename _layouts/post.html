@@ -82,9 +82,9 @@ post_class: post-template
             <!--{% include share.html %} -->
             
             <!-- Disqus comments -->
-           <!-- {% if page.duoshuo %} -->
+            {% if page.comments %} 
                 {% include disqus.html %}
-            <!--{% endif %} -->
+            {% endif %}
             
         </footer>
 
