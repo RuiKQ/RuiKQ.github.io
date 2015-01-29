@@ -22,7 +22,7 @@ categories: iOS autoLayout UIScrollView
 
 出现警告，期望label宽度0，是因为在storyboard设计阶段自动计算label文字宽度为0，所以label大小也为0；可以通过设置Intrinsic Size 为PlaceHolder去掉警告，这里告诉storyboard设置一个临时占位尺寸，这个占位尺寸仅在storyboard设计阶段有效，不会影响到运行时的尺寸，运行，现在正常了。
 
-![图3](https://raw.githubusercontent.com/RuiKQ/RuiKQ.github.io/master/assets/images/0127/13.png)
+![图3](https://raw.githubusercontent.com/RuiKQ/RuiKQ.github.io/master/assets/images/0127/3.png)
 
 
 ##UIScrollView
@@ -45,7 +45,7 @@ anchorViewForWidth是一个宽和父视图相等，高为0的视图，contentVie
 
 而对于系统无法计算的控件虽然设置了`placeHolder`没有了警告，但是运行时控件却不可见，所以只有先设定高度固定再将限制映射为变量，运行时计算修改constant。
 
-![图7](https://raw.githubusercontent.com/RuiKQ/RuiKQ.github.io/master/assets/images/0127/17.png)
+![图7](https://raw.githubusercontent.com/RuiKQ/RuiKQ.github.io/master/assets/images/0127/7.png)
 
 ####UIScrollView中的注意事项
 1、有些情况下UIScrollView不能滚动
