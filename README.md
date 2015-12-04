@@ -1,3 +1,7 @@
+# 我的技术博客
+[博客地址](http://ruikq.github.io/)
+##下面是博客使用的主题
+
 # Kasper
 
 This is a port of Ghost's default theme [Casper](https://github.com/tryghost/casper) for Jekyll. 
